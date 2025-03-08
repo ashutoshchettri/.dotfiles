@@ -19,6 +19,8 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+export XCURSOR_THEME="Nordic-cursors"
+
 source $ZSH/oh-my-zsh.sh
 
 # Check archlinux plugin commands here
