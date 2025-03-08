@@ -1,54 +1,63 @@
-/* Power menu */
+/* Power menu configuration for Rofi */
 
 configuration {
-  font:                     "JetBrainsMono Nerd Font 8";
+  font:                     "JetBrainsMono Nerd Font 8";  /* Kept as is */
 }
 
+/* Import theme */
 @theme "~/.config/rofi/theme.rasi"
 
-/* Window */
-
+/* Window styling */
 window {
   location:                 northeast;
   anchor:                   north;
   x-offset:                 -3px;
   y-offset:                 3px;
   width:                    150px;
-  border:                   2px;
+  border:                   2px solid;                   /* Added 'solid' for clarity */
   border-radius:            10px;
   border-color:             @main-br;
   background-color:         @main-bg;
+  padding:                  4px;                        /* Added padding for breathing room */
   children:                 [ mainbox ];
 }
 
+/* Main container */
 mainbox {
   background-color:         inherit;
   text-color:               @main-fg;
+  spacing:                  2px;                        /* Added spacing for better separation */
   children:                 [ listview ];
 }
 
-/* List */
-
+/* List of options */
 listview {
   lines:                    6;
   padding:                  6px;
   background-color:         inherit;
+  spacing:                  2px;                        /* Added spacing between items */
 }
 
+/* Individual menu items */
 element {
-  padding:                  6px;
+  padding:                  6px 10px;                   /* Adjusted padding for balance */
   cursor:                   pointer;
   background-color:         inherit;
   text-color:               @main-fg;
+  border-radius:            6px;                        /* Added subtle rounding */
 }
+
 element selected.normal {
   border-radius:            6px;
   background-color:         @select-bg;
   text-color:               @select-fg;
 }
+
+/* Text within elements */
 element-text {
   padding:                  0 6px;
   cursor:                   inherit;
   background-color:         inherit;
   text-color:               inherit;
+  vertical-align:           0.5;                        /* Added to center text vertically */
 }
