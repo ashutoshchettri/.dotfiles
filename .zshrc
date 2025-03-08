@@ -15,8 +15,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
     git
     archlinux
-    zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-autosuggestions
+    zsh-completions
 )
 
 export XCURSOR_THEME="Nordic-cursors"
